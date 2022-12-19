@@ -25,7 +25,7 @@ let app = "CarConfigurator427_reimport"
 let fullDomain = "connector.eagle3dstreaming.com"
 
 let owner = "demo"
-let configurationName = "0AhsanConfig"
+let configurationName = "E3DS-Iframe-Demo"
 let MeetingId = "" //"21d666ba-a0d8-4db9-9643-e74525bafe1b"
 
 
