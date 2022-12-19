@@ -24,7 +24,7 @@ let app = "CarConfigurator427_reimport"
 
 let fullDomain = "connector.eagle3dstreaming.com"
 
-let compnay = "demo"
+let owner = "demo"
 let configurationName = "0AhsanConfig"
 let MeetingId = "" //"21d666ba-a0d8-4db9-9643-e74525bafe1b"
 
@@ -32,7 +32,7 @@ let MeetingId = "" //"21d666ba-a0d8-4db9-9643-e74525bafe1b"
 ///////////////////////////////////////////////
 
 var part1 = "https://" + fullDomain
-var part2 = "/v5/" + compnay + "/" + app + "/" + configurationName
+var part2 = "/v5/" + owner + "/" + app + "/" + configurationName
 
 ////////////////////////////
 
@@ -48,7 +48,7 @@ if ((MeetingId == "") || (MeetingId == undefined)) {
         search = "?hostMeetingId=" + MeetingId
     else //type="text/css" rel="stylesheet" href="assets/css/voip.css"/>
     {
-        part2 = "/v5/" + compnay + "/" + configurationName
+        part2 = "/v5/" + owner + "/" + configurationName
 
         if ((MeetingId != "") || (MeetingId != undefined))
             search = "?GuestMeetingId=" + MeetingId
