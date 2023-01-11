@@ -1,6 +1,6 @@
 function updateAppConfig() {
     var obj = {
-        "useVOIP": 1
+        "useVOIP": 0
     }
 
     return obj
@@ -24,7 +24,7 @@ let app = "CarConfigurator427_reimport"
 
 let fullDomain = "connector.eagle3dstreaming.com"
 
-let owner = "demo"
+var owner = "demo"
 let configurationName = "E3DS-Iframe-Demo"
 let MeetingId = "" //"21d666ba-a0d8-4db9-9643-e74525bafe1b"
 

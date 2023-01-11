@@ -17,22 +17,26 @@ html {
   outline: none;
 }
 
-.e3ds_bottom_panel,
-.e3ds_bottom_panel_left {
+.e3ds_bottom_panel, .e3ds_bottom_panel_left {
   position: fixed;
   left: 0px;
   right: 0px;
   bottom: 0px;
   height: 100px;
+  width:fit-content;
 }
 
 .e3ds_bottom_panel_left {
-  width: 50%;
+  width: fit-content;
 }
 
 .left {
   left: 0px;
   right: 200px;
+}
+
+e3ds_bottom_panel_controlsObj  {
+  bottom: 52px;
 }
 
 .e3ds_bottom_panelVoip {
@@ -50,12 +54,12 @@ html {
   background: #000000aa;
   display: flex;
   transition: 250ms ease-in;
-  place-items: center;
+   place-items: center;
   position: fixed;
   bottom: 28px;
   right: 0px;
   left: 0px;
-
+ 
   margin: 0;
 }
 
@@ -86,7 +90,7 @@ html {
   transition: 250ms;
   height: 44px;
   width: 44px;
-  place-items: center;
+    place-items: center;
   position: fixed;
   bottom: 28px;
   right: 0px;
@@ -111,10 +115,9 @@ html {
   padding: 4px;
 }
 
-.e3ds_bottom_panel_controls,
-.e3ds_bottom_panel_controls_left {
+.e3ds_bottom_panel_controls, .e3ds_bottom_panel_controls_left {
   position: fixed;
-  left: 44px;
+  right: 44px;
   background: #00000060;
   display: flex;
   transition: 250ms ease-in;
@@ -124,9 +127,10 @@ html {
   left: 44px;
   width: fit-content;
   background: transparent;
+  bottom: 52px;
 }
 
-.e3ds_bottom_panel_controls>button {
+.e3ds_bottom_panel_controls > button {
   width: 44px;
   margin: 0px;
   padding: 0px;
@@ -136,7 +140,7 @@ html {
   cursor: pointer;
 }
 
-.e3ds_bottom_panel_controls_left>button {
+.e3ds_bottom_panel_controls_left > button {
   width: 44px;
   margin: 0px;
   padding: 0px;
@@ -152,10 +156,9 @@ html {
 }
 
 
-.e3ds_bottom_panel_controls button img,
-.e3ds_bottom_panel_controls_left button {
-  height: 45px;
-  width: 45px;
+.e3ds_bottom_panel_controls button img, .e3ds_bottom_panel_controls_left button {
+  height: 48px;
+  width: 48px;
 }
 
 .e3ds_controls_fsc {
@@ -187,25 +190,16 @@ html {
   background: #000000aa;
 }
 
-.bottom-controlpanel-container {
-  position: absolute;
-  bottom: 100px;
-  display: flex;
-  gap: 40px;
-  flex-direction: column;
-}
-
-.hide {
-  display: none !important;
-  /* margin-left: -400px; */
-}
-
-.e3ds_control_toggle_left {
+.e3ds_control_toggle, .e3ds_control_toggle_left {
   display: grid;
   place-items: center;
   position: fixed;
   right: 0px;
   width: 48px;
+  
+  height: 48px;
+  bottom: 52px;
+  
   margin: 0;
   border: none;
   background: #000000aa;
@@ -213,21 +207,6 @@ html {
   transition: 200ms;
   cursor: pointer;
 }
-
-.e3ds_control_toggle {
-  display: grid;
-  place-items: center;
-  position: fixed;
-  left: 0px;
-  width: 48px;
-  margin-bottom: 100px;
-  border: none;
-  background: #000000aa;
-  color: white;
-  transition: 200ms;
-  cursor: pointer;
-}
-
 
 .e3ds_control_toggle:hover {
   background: #444;
@@ -237,13 +216,13 @@ html {
   background: #444;
 }
 
-.e3ds_control_toggle_icon img {
+.e3ds_control_toggle_icon img  {
   color: white;
   transition: 250ms;
   width: 44px;
 }
 
-.e3ds_control_toggle_icon_left img {
+.e3ds_control_toggle_icon_left img  {
   color: white;
   transition: transform 1s;
   width: 44px;
