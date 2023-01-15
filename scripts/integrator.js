@@ -18,17 +18,15 @@ console.log("HTML-->appconfigPassed2Ejs: " + JSON.stringify(appconfigPassed2Ejs)
 
 //config path
 let isGuestMode = false
-let app = "CarConfigurator427_reimport"
-
-//////////////////
+let MeetingId = "" //"21d666ba-a0d8-4db9-9643-e74525bafe1b"
 
 let fullDomain = "connector.eagle3dstreaming.com"
 
-var owner = "demo"
-let configurationName = "E3DS-Iframe-Demo"
-let MeetingId = "" //"21d666ba-a0d8-4db9-9643-e74525bafe1b"
 
-
+/////////////////
+var owner = "demo" //"put your user name "
+let app = "CarConfigurator427_reimport" //"put your app name"
+let configurationName = "E3DS-Iframe-Demo"//"put your config name"
 ///////////////////////////////////////////////
 
 var part1 = "https://" + fullDomain
