@@ -25,7 +25,7 @@ let fullDomain = "connector.eagle3dstreaming.com"
 
 /////////////////
 var owner = "demo" //"put your user name "
-let app = "CarConfigurator427_reimport" //"put your app name"
+let app = "E3DSFeaturesTemplate" //"put your app name"
 let configurationName = "E3DS-Iframe-Demo"//"put your config name"
 ///////////////////////////////////////////////
 
