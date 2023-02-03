@@ -10,6 +10,12 @@ function afterGettingAppConfig() {
     console.log("ob-afterGettingAppConfig");
     //changeConfigValue("useVOIP",1)
 }
+function afterGettingUnrealResponse(descriptor) {
+    console.log("ob-afterGettingUnrealResponse");
+    console.log("UnrealResponse: "+descriptor);
+    //changeConfigValue("useVOIP",1)
+}
+
 var appconfigPassed2Ejs = {}
 
 console.log("HTML-->appconfigPassed2Ejs: " + JSON.stringify(appconfigPassed2Ejs));
