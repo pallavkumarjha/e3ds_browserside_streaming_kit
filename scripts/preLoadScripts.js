@@ -44,7 +44,7 @@ let urlParams = new URLSearchParams(search);
 console.log("urlParams: ")
 
 
-//?app=CarConfigurator427_reimport&owner=demo&configuration=0AhsanConfig
+//?app=CarConfigurator427_reimport&owner=demo&configuration=E3DS-Iframe-Demo
 
   for (var [key, value] of urlParams.entries()) 
   {
