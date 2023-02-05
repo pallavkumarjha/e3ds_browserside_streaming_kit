@@ -10,16 +10,19 @@ function afterGettingAppConfig() {
     console.log("ob-afterGettingAppConfig");
     //changeConfigValue("useVOIP",1)
 }
+var appconfigPassed2Ejs = {}
+
+console.log("HTML-->appconfigPassed2Ejs: " + JSON.stringify(appconfigPassed2Ejs));
+
+
+
+	  
+var call2EmitUIInteraction=undefined
 function afterGettingUnrealResponse(descriptor) {
     console.log("ob-afterGettingUnrealResponse");
     console.log("UnrealResponse: "+descriptor);
     //changeConfigValue("useVOIP",1)
 }
-
-var appconfigPassed2Ejs = {}
-
-console.log("HTML-->appconfigPassed2Ejs: " + JSON.stringify(appconfigPassed2Ejs));
-
 
 
 //config path
@@ -29,10 +32,42 @@ let MeetingId = "" //"21d666ba-a0d8-4db9-9643-e74525bafe1b"
 let fullDomain = "connector.eagle3dstreaming.com"
 
 
-/////////////////
+//////////////////
 var owner = "demo" //"put your user name "
 let app = "E3DSFeaturesTemplate" //"put your app name"
 let configurationName = "E3DS-Iframe-Demo"//"put your config name"
+
+let search=window.location.search
+console.log("search: " + search)
+
+let urlParams = new URLSearchParams(search);
+console.log("urlParams: ")
+
+
+//?app=CarConfigurator427_reimport&owner=demo&configuration=0AhsanConfig
+
+  for (var [key, value] of urlParams.entries()) 
+  {
+	  console.log(key, value);
+	var X= urlParams.get('app') 
+	var Y= urlParams.get('owner') 
+	var Z= urlParams.get('configuration') 
+	  
+	  if(X!= undefined)
+		  app=X
+	  
+	  
+	    if(Y!= undefined)
+		  owner=Y
+	  
+	    if(Z!= undefined)
+		  configurationName=Z
+	  
+  
+
+   
+  }
+  
 ///////////////////////////////////////////////
 
 var part1 = "https://" + fullDomain
@@ -41,7 +76,7 @@ var part2 = "/v5/" + owner + "/" + app + "/" + configurationName
 ////////////////////////////
 
 
-
+/* 
 
 let search = ""
 
@@ -59,18 +94,12 @@ if ((MeetingId == "") || (MeetingId == undefined)) {
     }
 
 }
+ */
 
 
 
-console.log("search: " + search)
 
-			
-let urlParams = new URLSearchParams(search)
-console.log("urlParams: ")
 
-for (const [key, value] of urlParams) {
-    console.log(key, value);
-}
 
 
 
