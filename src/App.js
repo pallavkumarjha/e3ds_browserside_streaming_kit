@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 
 import './App.css';
+import E3DSReactComponent from './components/E3DSReactComponent';
 
 const Home = () => <span>Home</span>;
 const About = () => <span>About</span>;
@@ -22,6 +23,7 @@ const App = () => (
         <Button>Users</Button>
       </ButtonToolbar>
     </h2>
+    <E3DSReactComponent/>
   </Container>
 
 );
