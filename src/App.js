@@ -1,31 +1,40 @@
-import React from 'react';
+import React, { useState } from "react"
 
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 
 import './App.css';
 import E3DSReactComponent from './components/E3DSReactComponent';
 
-const Home = () => <span>Home</span>;
-const About = () => <span>About</span>;
-const Users = () => <span>Users</span>;
+const App = () => {
 
-const App = () => (
+  const [pos, setPos] = useState("");
 
-  <Container className="p-3">
-    <h1 className="header">Welcome To React-Bootstrap</h1>
-    <h2>
-      Navigate to{' '}
-      <ButtonToolbar className="custom-btn-toolbar">
-        <Button>Home</Button>
-        <Button>About</Button>
-        <Button>Users</Button>
-      </ButtonToolbar>
-    </h2>
-    <E3DSReactComponent/>
-  </Container>
+  const handleChange = e => {
+    setPos(e.target.value);
+  }
 
-);
+  const movePosition = () => {
+    window?.call2EmitUIInteraction({
+      Teleport: pos
+    });
+  }
+
+  return <>
+    <Container className="p-3">
+      <h1 className="header">Welcome To E3DS Stream UI KIT Demo</h1>
+      <h2>
+        <button onClick={movePosition}>Move position to</button>
+        <input
+          type="text"
+          value={pos}
+          onChange={handleChange}
+        />
+        <E3DSReactComponent/>
+      </h2>
+
+    </Container>
+  </>
+
+}
 
 export default App;
