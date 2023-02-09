@@ -7,6 +7,13 @@ import E3DSReactComponent from './components/E3DSReactComponent';
 
 const App = () => {
 
+  window.addEventListener('game-event', (event) => {
+
+    console.log(event.detail);
+    setResponse(event.detail);
+
+  });
+
   const [pos, setPos] = useState("");
   const [response, setResponse] = useState("Sample text");
 

@@ -21,8 +21,10 @@ var call2EmitUIInteraction=undefined
 function afterGettingUnrealResponse(descriptor) {
     console.log("ob-afterGettingUnrealResponse");
     console.log("UnrealResponse: "+descriptor);
+    var event = new CustomEvent("game-event", { detail: descriptor});
+    window.dispatchEvent(event);
 	
-	document.getElementById('webrtc-low-qp-text').value=descriptor;
+	//document.getElementById('webrtc-low-qp-text').value=descriptor;
     //changeConfigValue("useVOIP",1)
 }
 
