@@ -10,6 +10,28 @@ function afterGettingAppConfig() {
     console.log("ob-afterGettingAppConfig");
     //changeConfigValue("useVOIP",1)
 }
+
+function onDataChannelOpen() 
+{
+    console.log("ob-onDataChannelOpen");
+    //changeConfigValue("useVOIP",1)
+	
+	  var overlay = document.getElementById("overlay");
+			   overlay.style.display = "block";
+			   
+			   let overlayPSSettings = document.getElementById("overlayPSSettings");
+			   overlayPSSettings.style.display = "block";
+			   
+			   
+  
+}
+
+function onDataChannelClose() 
+{
+    console.log("ob-onDataChannelClose");
+    //changeConfigValue("useVOIP",1)
+}
+
 var appconfigPassed2Ejs = {}
 
 console.log("HTML-->appconfigPassed2Ejs: " + JSON.stringify(appconfigPassed2Ejs));
