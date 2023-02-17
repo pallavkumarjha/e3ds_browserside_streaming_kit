@@ -1,1 +1,19 @@
 
+name: DeployName
+on:
+  push:
+    branches:
+      - branchname
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.PRV_KEY }}
+          known_hosts: "Something"
+      - name: Adding known_hosts
+        run: ssh-keyscan -H 99.60.91.134 >> ~/.ssh/known_hosts
+      - run: ssh -tt Eagle3dStreaming@99.60.91.134 './streaming-sdk.sh'
