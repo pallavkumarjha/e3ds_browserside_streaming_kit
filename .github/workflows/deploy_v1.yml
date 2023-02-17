@@ -3,7 +3,7 @@ name: DeployName
 on:
   push:
     branches:
-      - branchname
+      - v1
 jobs:
   build:
     runs-on: ubuntu-latest
