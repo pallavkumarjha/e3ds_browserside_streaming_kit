@@ -1,7 +1,7 @@
 
 
-function afterBindingHtmlEvents() {
-    console.log("ob-afterBindingHtmlEvents");
+function onHtmlBind() {
+    console.log("ob-onHtmlBind");
     //changeConfigValue("useVOIP",1)
 	
 	
@@ -21,7 +21,7 @@ let webrtcParamsSubmit2 = document.getElementById('webrtc-params-submit');
 	};
 		
 		
-		call2EmitUIInteraction(descriptor2)
+		sendToUnreal(descriptor2)
 		};
 	}
 

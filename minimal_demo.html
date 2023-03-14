@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+   <style>
+     <!-- add your style info here -->
+   </style>
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+      <!-- <base href="/"> --> <!-- disable this line for streaming ui -->
+
+	  
+	  
+      <script type='text/javascript'>
+          //do your coding here
+      </script>
+	  
+	  
+	    <!-- add preLoadScripts.js which contains all the dinafiantion which will be requyired  by m.js -->
+	    <!-- <script type="text/javascript" src="scripts_demo/preLoadScripts.js"></script> -->
+	    <script type="text/javascript" src="dist/m.js"></script>
+		<!-- <script type="text/javascript" src="scripts_demo/postLoadScripts.js"></script> -->
+		
+	<link type="text/css" rel="stylesheet" href="assets/public/player.css">
+	   
+	   
+      <script type="text/javascript" src="src/adapter-latest.js"></script>
+   </head>
+   <!-- <body onload="load()" onmousedown="unMuteAudio4AutoPlay()" > -->
+   <body>
+      <div id="playerUI"  style="display: block;" >
+        
+		<div id="player"  style="display: block;">
+            <video id="streamingVideo" playsinline >
+               
+               <source src="" type="video/mp4">
+            </video>
+         </div>
+
+      </div>
+	
+      <canvas id="canvas">
+	 <!--  captureScreenShot() using canvas. before rmeoveing this element we need to adopt captureScreenShot(). 
+	  otherwise captureScreenShot() will strop working -->
+	  </canvas>
+
+   </body>
+</html>
