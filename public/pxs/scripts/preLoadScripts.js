@@ -29,6 +29,20 @@ function afterGettingUnrealResponse(descriptor) {
 }
 
 
+// NOTE: Probably this is more suitable for postLoadScript??? really ??? lets talk about it . give me a call
+function onDataChannelOpen() {
+	console.log("ob-onDataChannelOpen");
+	var event = new CustomEvent("datachannel-event", { detail: "open" });
+	window.dispatchEvent(event);
+}
+
+function onDataChannelClose() {
+	console.log("ob-onDataChannelClose");
+    alert("ob-onDataChannelClose");
+	var event = new CustomEvent("datachannel-event", { detail: "close" });
+	window.dispatchEvent(event);
+}
+
 //config path
 let isGuestMode = false
 let MeetingId = "" //"21d666ba-a0d8-4db9-9643-e74525bafe1b"
