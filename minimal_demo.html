@@ -14,14 +14,22 @@
 	  
 	  
       <script type='text/javascript'>
-          //do your coding here
+         var sendToUnreal=undefined
+		 var e3ds_data = 
+				{
+					
+				  //"domain": "connector.eagle3dstreaming.com",//"put your CP url if you have a special one "
+				  "userName": "demo",//"put your user name "
+					"appName": "E3DSFeaturesTemplate", //"put your app name"
+					"configurationName": "E3DS-Iframe-Demo",//"put your config name"
+					
+				}
+
       </script>
 	  
-	  
-	    <!-- add preLoadScripts.js which contains all the dinafiantion which will be requyired  by m.js -->
-	    <!-- <script type="text/javascript" src="scripts_demo/preLoadScripts.js"></script> -->
-	    <script type="text/javascript" src="dist/m.js"></script>
-		<!-- <script type="text/javascript" src="scripts_demo/postLoadScripts.js"></script> -->
+	 
+	    <script type="text/javascript" src="dist/e3dsCore.min.js"></script>
+		
 		
 	<link type="text/css" rel="stylesheet" href="assets/public/player.css">
 	   
