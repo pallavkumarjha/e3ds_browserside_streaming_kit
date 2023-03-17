@@ -1,21 +1,30 @@
 
-var sendToUnreal=undefined
-var e3ds_data = 
+var e3ds_controller = 
 				{
-					
-				  //"domain": "connector.eagle3dstreaming.com",//"put your CP url if you have a special one "
-				  "userName": "demo",//"put your user name "
-					"appName": "E3DSFeaturesTemplate", //"put your app name"
-					"configurationName": "E3DS-Iframe-Demo",//"put your config name"
-					"configuration": {
-									"useVOIP": 0,
-										"showPsControl": "1",
-										"isAdminDebugging": 1,
-									}
+					"core": 
+											  {
+												//"domain": "connector.eagle3dstreaming.com",//"put your CP url if you have a special one "
+												"userName": "demo",//"put your user name "
+												"appName": "E3DSFeaturesTemplate", //"put your app name"
+												"configurationName": "E3DS-Iframe-Demo",//"put your config name"
+												
+											  },
+				  
+					"configurationToOverride": 
+											  {
+												"useVOIP": 0,
+												"showPsControl": "0",
+												
+											  }
 				}
 
 
 
+
+function sendToUnreal(descriptor)
+{
+	emitUIInteraction(descriptor)
+}
 
 
 function onConfigAcquire() {
@@ -40,6 +49,11 @@ function onDataChannelClose()
 
 
 	  
+
+function onSessionExpired() 
+{
+	self.location = "assets/pages/session-expired.htm";
+}
 
 function onResponseFromUnreal(descriptor) 
 {
@@ -71,12 +85,13 @@ let webrtcParamsSubmit2 = document.getElementById('webrtc-params-submit');
 			Teleport: val
 		};*/
 		//emitUIInteraction(descriptor);
-		let descriptor2 = {
-		Teleport: document.getElementById('webrtc-max-fps-text').value
-	};
+		let descriptor2 = 
+						{
+							Teleport: document.getElementById('webrtc-max-fps-text').value
+						};
 		
 		
-		sendToUnreal(descriptor2)
+		e3ds_controller.sendToUnreal(descriptor2)
 		};
 	}
 
