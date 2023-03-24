@@ -30,7 +30,7 @@ const App = () => {
   }
 
   const movePosition = () => {
-    window?.sendToUnreal({
+    window?.e3ds_controller.sendToUnreal({
       Teleport: pos
     });
   }

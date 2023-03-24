@@ -9,7 +9,6 @@ const myHTML = `
         </video>
     </div>
 </div>
-<canvas id="canvas"></canvas>
 `;
 
 function E3DSReactComponent() {
